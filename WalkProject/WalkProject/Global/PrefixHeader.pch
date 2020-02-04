@@ -1,0 +1,113 @@
+//
+//  PrefixHeader.pch
+//  WalkProject
+//
+//  Created by jiangbin on 2020/2/4.
+//  Copyright © 2020 jiangbin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+
+#ifdef DEBUG
+
+#else
+
+#endif
+
+#define PrefixHeader_pch
+
+#pragma mark ------------框架------------------------
+#import <UIKit/UIKit.h>
+
+#import <Masonry/Masonry-umbrella.h>
+
+// 腾讯组件框架
+#import <QMUIKit/QMUIKit-umbrella.h>
+
+//#import <ReactiveObjC/ReactiveObjC.h>
+
+#import <YTKNetwork/YTKNetwork.h>
+
+#import <JSONModel/JSONModel.h>
+
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <MJRefresh/MJRefresh.h>
+
+
+//#import "WXApi.h"
+
+#pragma mark ------------宏-------------------------
+// 接口
+#import "Interface.h"
+// 颜色宏
+#import "ColorMacro.h"
+// 尺寸宏
+#import "SizeMacro.h"
+// app宏
+#import "AppMacro.h"
+// 字体宏
+#import "FontMacro.h"
+
+//#import "RACEXTScope.h"
+
+
+
+#pragma mark -------------分类扩展-------------------
+// 颜色扩展
+#import "UIColor+JJCategory.h"
+// 视图扩展
+#import "UIView+JJCategory.h"
+// 布局扩展
+#import "UIView+LayoutExtension.h"
+// 字符串扩展
+//#import "NSString+extension.h"
+// label扩展
+#import "UILabel+JJCategory.h"
+// 按钮扩展
+//#import "UIButton+extension.h"
+// 控制器扩展
+//#import "UIViewController+extension.h"
+// 图片扩展
+//#import "UIImage+extension.h"
+// 防止多次点击扩展
+//#import "UIControl+timeInterval.h"
+// MJRefresh无更多数据扩展
+//#import "MJRefreshFooter+noMoreData.h"
+
+#pragma mark ---------------类文件--------------------
+
+#import "Const.h"
+
+#import "JJUserManager.h"
+
+#import "JJNetworkManager.h"
+
+#import "JJVerifyTool.h"
+
+#import "JJCommonTool.h"
+
+#import "JJAppDispatchManager.h"
+
+#import "JJAppManager.h"
+
+//#import "AlertView.h"
+
+//#import "JJAlertTool.h"
+
+//#import "JJBaseWebViewController.h"
+
+#import "JJShowNoDataTool.h"
+
+//#import "JJLoadingAnimationViewTool.h"
+
+//#import "JJOptionAlertView.h"
+
+//#import "JJTimeTool.h"
+
+
+// 解决控制台打印信息不全问题
+#define CLog(format, ...)  NSLog(format, ## __VA_ARGS__)
+#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#endif /* PrefixHeader_pch */
